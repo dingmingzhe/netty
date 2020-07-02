@@ -29,6 +29,7 @@ public class NIOFileChannel02 {
                 break;
             }
             //直接使用byteBuffer.get进行数据的截取还是会获取到后面的空格 多出乱码信息
+            //  System.out.println(new String(byteBuffer.get(byteBuffer.array(),0,read).array()));
             byte[] array = byteBuffer.array();
             System.out.println(new String(array,0,read));
 
